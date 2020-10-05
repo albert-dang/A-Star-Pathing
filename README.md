@@ -8,7 +8,7 @@ This algorithm, written in GameMaker Language (GML) for GameMaker Studio 2, is a
 The GameMaker built-in motion planning functions are inadequate when working with complex geometry such as with a 2.5D game.
 These scripts effectively replace the built-in mp_path functions. 
 However, the algorithm ultimately outputs several sets of coordinates which represent grid spaces between two points.
-Thus, the algorithm can be used for many purposes, i.e. drawing as demonstrated in this resource.
+Thus, the algorithm can be used for many purposes, i.e. drawing
 
 ## Variables
 The following are variables as they appear in the base resource and what those variables do.
@@ -19,7 +19,7 @@ The following are variables as they appear in the base resource and what those v
 This is the ID of the object which we are moving. That object must have 3 readable variables:
 1. Its x position
 2. Its y position
-3. A ds_stack (a "first in, last out" (FILO) data structure)
+3. A ds_stack, - "first in, last out" (FILO) data structure
 
 #### moveX
 This is the x coordinate where we are moving the object.
