@@ -31,4 +31,4 @@ For example, if columns are 10 pixels wide, we will get the same results for any
 This is the y coordinate where we are moving the object.
 Note that this coordinate will be corrected such that it is not important to know the exact coordinate of our intended grid.
 For example, if rows are 10 pixels tall, we are effectively inputting the same results for any moveY where
->rowFirst_y <= moveY <= columnLast_y
+>rowFirst_y <= moveY <= rowLast_y
