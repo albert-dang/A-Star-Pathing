@@ -24,11 +24,11 @@ This is the ID of the object which we are moving. That object must have 3 readab
 #### moveX
 This is the x coordinate where we are moving the object.
 Note that this coordinate will be corrected such that it is not important to know the exact coordinate of our intended grid.
-For example, we will get the same results for any moveX, where
+We are effectively inputting the same value for any moveX, where
 >columnFirst_x <= moveX <= columnLast_x
 
 #### moveY
 This is the y coordinate where we are moving the object.
 Note that this coordinate will be corrected such that it is not important to know the exact coordinate of our intended grid.
-For example, we are effectively inputting the same results for any moveY, where
+We are effectively inputting the same value for any moveY, where
 >rowFirst_y <= moveY <= rowLast_y
