@@ -18,7 +18,7 @@ This function initializes the pathfinding algorithm and assigns a stack of waypo
   - row = starting row  
   - colGoto = destination column  
   - rowGoto = destination row  
-      - You can use get_grid(x) and get_grid(y) from this library to convert any x, y coordinate to a column and row, respectively
+      - You can use `get_grid(x)` and `get_grid(y)` from this library to convert any x, y coordinate to a column and row, respectively
   - grid = ID of some mp_grid  
   - grid_originX = absolute x coordinate of origin of the grid  
   - grid_originY = absolute y coordinate of origin of the grid
