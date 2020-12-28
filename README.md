@@ -10,19 +10,8 @@ Then access the x and y keys:
 - `xNext = waypoint[! moveX]`  
 - `yNext = waypoint[! moveY]`  
 
-NOTE: 
-
 ## get_moveStack()
 This function initializes the pathfinding algorithm and assigns a stack of waypoints to a given instance.
-
-- Each waypoint contains two keys/values:  
-  - "moveX" is the absolute x coordinate for some grid  
-  - "moveY" is the absolute y coordinate for the same grid
-
-- The waypoints are in order, such that:  
-  - the top of the stack i = 0 is the pawn's current grid  
-  - the next waypoint i + 1 is an adjacent grid space, one column OR row closer to the destination  
-  - the bottom of the stack n is the destination grid  
 
 - Arguments:  
   - col = starting column  
