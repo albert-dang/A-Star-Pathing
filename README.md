@@ -7,8 +7,8 @@ Once you're ready to read in a waypoint, simply pop the moveStack assigned to yo
 - `waypoint = ds_stack_pop(moveStack)` 
 
 Then access the x and y keys:  
-- `xNext = waypoint[! moveX]`  
-- `yNext = waypoint[! moveY]`  
+- `xNext = waypoint[? moveX]`  
+- `yNext = waypoint[? moveY]`  
 
 ## get_moveStack()
 This function initializes the pathfinding algorithm and assigns a stack of waypoints to a given instance.
