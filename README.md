@@ -1,5 +1,6 @@
 # Quickstart
-A quick and dirty guide to get you integrated. You'll mostly be concerned with get_moveStack(). Calling this assigns a stack of waypoints to your given instance. This is a full solution for pathfinding so that you only need to figure out:
+Quick and dirty:  
+You'll mostly be concerned with get_moveStack(). Calling this assigns a stack of waypoints to your given instance. This is a full solution for pathfinding so that you only need to figure out:
 - When you want to read in the next waypoint
 - How you're getting to the x and y stored in that waypoint
 
