@@ -1,7 +1,7 @@
 # Quickstart
 The algorithm is designed for a 2-dimensional grid where obstacles are mapped to rectangular cells. Your smallest collidable object will occupy one cell. Movement is 4-directional for quick implementation but is easily converted to 8-directional by expanding on `moveStack_neighbours()`. The purpose of this format is to allow us to respect the orthogonal (graphic) representation of the game while facilitating movement and dynamic pathfinding on a different 2-dimensional plane.
 
-With `get_moveStack()`, we can assign a stack of waypoints to a given instance. This is a full solution for pathfinding so that we only need to figure out:  
+With `get_moveStack()`, we can assign a stack of waypoints to a given instance. We only need to figure out:  
 - When we want to read in the next waypoint  
 - How we're getting to the x and y stored in that waypoint  
   
