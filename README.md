@@ -1,27 +1,43 @@
 # Quickstart
-With `get_moveStack()`, you can assign a stack of waypoints to a given instance. This is a full solution for pathfinding so that you only need to figure out:
-- When you want to read in the next waypoint
-- How you're getting to the x and y stored in that waypoint
+The algorithm is designed for a 2-dimensional grid where obstacles are mapped to rectangular cells. Your smallest collidable object will occupy one cell. Movement is 4-directional for quick implementation but is easily converted to 8-directional by expanding on `moveStack_neighbours()`.  
 
-Once you're ready to read in a waypoint, simply pop the moveStack assigned to your given instance:  
-- `waypoint = ds_stack_pop(moveStack)` 
+With `get_moveStack()`, we can assign a stack of waypoints to a given instance. This is a full solution for pathfinding so that we only need to figure out:  
+- When we want to read in the next waypoint  
+- How we're getting to the x and y stored in that waypoint  
+  
+Once we're ready to read in a waypoint, simply pop the moveStack assigned to a given instance:  
+- `waypoint = ds_stack_pop(moveStack)`  
 
 Then access the x and y keys:  
 - `xNext = waypoint[? moveX]`  
 - `yNext = waypoint[? moveY]`  
 
-## get_moveStack()
-This function initializes the pathfinding algorithm and assigns a stack of waypoints to a given instance.
+## `get_moveStack()`  
+Initializes the pathfinding algorithm and assigns a stack of waypoints to a given instance.  
+  
+### Arguments:  
+- col (int)  
+  - The relative starting column of the instance we're moving. `col = 0` would mean starting in the leftmost column of our moving grid. We can use `get_grid(instance.x)` to quickly get a relative column.
+  
+- row (int)  
+  - The relative starting row of the instance we're moving. `row = 0` would mean starting in the topmost row of our moving grid. We can use `get_grid(instance.y)` to quickly get a relative row.  
+  
+- colGoto (int)  
+  - The relative row of the distination. `colGoto = 0` would be the leftmost column considered by the pathfinder. We can use `get_grid(x)` from this library to convert any x to a relative column. For example, we can easily assign a column with the mouse simply using `get_grid(mouse_x)` to figure out the relative column for us.  
+  
+- rowGoto (int)  
+   - The relative row of the distination. `rowGoto = 0` would be the topmost row considered by the pathfinder. We can use `get_grid(y)` from this library to convert any y to a relative row. For example, we can easily assign a row for following another instance simply using `get_grid(ally.y)` to figure out the relative row for us.  
+  
+- grid (mp_grid)  
+  - ID of some mp_grid  
+    
+- grid_originX = absolute x coordinate of origin of the grid  
+- grid_originY = absolute y coordinate of origin of the grid  
+    - Allows for dynamic pathfinding and optimizing memory  
+- grid_cellWidth = width of columns in the grid  
+- grid_cellHeight = height of rows in the grid  
 
-- Arguments:  
-  - col = starting column  
-  - row = starting row  
-  - colGoto = destination column  
-  - rowGoto = destination row  
-      - You can use `get_grid(x)` and `get_grid(y)` from this library to convert any x, y coordinate to a column and row, respectively
-  - grid = ID of some mp_grid  
-  - grid_originX = absolute x coordinate of origin of the grid  
-  - grid_originY = absolute y coordinate of origin of the grid
-      - This allows for dynamic pathfinding and optimizing memory
-  - grid_cellWidth = width of columns in the grid  
-  - grid_cellHeight = height of rows in the grid  
+## `moveStack_neighbours()`  
+Creates neighbours for a given node and adds valid ones to unchecked nodes.
+
+### Arguments:
