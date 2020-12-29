@@ -36,8 +36,3 @@ Initializes the pathfinding algorithm and assigns a stack of waypoints to a give
     - Allows for dynamic pathfinding and optimizing memory  
 - grid_cellWidth = width of columns in the grid  
 - grid_cellHeight = height of rows in the grid  
-
-## `moveStack_neighbours()`  
-Creates neighbours for a given node and adds valid ones to unchecked nodes.
-
-### Arguments:
